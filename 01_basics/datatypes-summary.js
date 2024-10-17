@@ -39,3 +39,29 @@ console.log(typeof myFunction) // => function or object function
 
 // typeOf documentation
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ***********************************************
+// Lecture 10
+// Stack(used in primitive,change by value(copy of variable is provided)),
+// Heap(used in non-primitive,change by reference(original value will be provided))
+
+// call by value example
+let myYoutubename = "hitesh"
+let anotherName = myYoutubename
+anotherName = "chai aur code"
+console.log(myYoutubename);
+console.log(anotherName);
+
+// call by reference value
+ let userOne = {
+    email:"user1@gmail.com",
+    upi:"user1@gmail.com"
+ }
+let userTwo = userOne
+userTwo.email = "user2@gmail.com"
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
