@@ -54,3 +54,43 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))  // returns boolean values
 
+
+// Object de-structure and JSON API intro 
+const course = {
+    coursename : "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// ways to extract values from object
+
+// normal way
+// console.log(course.courseInstructor);
+
+// better syntax
+
+const {courseInstructor}  = course
+
+// we can also give another names 
+
+const {courseInstructor : teacher} = course
+
+console.log(courseInstructor);
+console.log(teacher);
+
+
+//  json api intro
+
+// it is considered as api
+// {
+//     "name":"hitesh",
+//     "cousename" : "js in hindi" ,
+//     "price" : "free"
+// }
+
+// javascript object notation
+[
+    {},
+    {},
+    {}
+]
