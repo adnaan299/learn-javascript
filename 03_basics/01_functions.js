@@ -79,3 +79,37 @@ function loginMessage(username){
 }
 
 console.log(loginMessage());
+
+
+// ... rest operator
+function calculateCartPrice(val1, val2, ...num1){
+    return num1;
+}
+
+console.log(calculateCartPrice(200, 400, 500));
+
+const user = {
+    username:"hites",
+    price: 199
+}
+
+function handleObject(anyobject){
+     console.log(`username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+
+// handleObject(user)
+// passing object directly
+handleObject({
+    username:"adnaan nasir",
+    price:443232332
+})
+
+const myNewArray = [200, 100, 111, 333]
+
+function returnArray(getArray){
+    return getArray[1]
+}
+
+console.log(returnArray(myNewArray));
+
+console.log(returnArray([1,4,5,6,7,7]))
