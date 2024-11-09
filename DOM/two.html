@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code  </title>
+</head>
+<body style= "background-color:#212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tueday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    
+</body>
+
+<script>
+    //-- select the parent element and find what are the values inside
+    const parent = document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1].innerHTML)
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+    }
+
+    // some styling
+    parent.children[1].style.color = "orange"
+
+    //some properites
+    console.log(parent.firstElementChild.innerHTML);
+    console.log(parent.lastElementChild);
+
+    //we can also move from children to parent
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
+
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling)
+
+    console.log("NODES: ", parent.childNodes)
+    // each enter is also considered as a node
+</script>
+</html>
