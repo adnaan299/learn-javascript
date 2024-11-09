@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM learning</title>
+    <style>
+        .bg-color{
+            background-color: black;
+            color: #fff
+        }
+    </style>
 </head>
-<body style= "background-color:#212121; color:#fff">
-    
+<body class="bg-color">
+    <div >
+        <div class="header" id="title">
+            <h1>Chai aur code</h1>
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
 </body>
-
-<script>
-    const div = document.createElement('div')
-    console.log(div);
-    div.className = "main"
-    div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title" , "generated Title")
-    div.style.backgroundColor = "green"
-    div.style.padding = "12px"
-    // div.innerText = "chai aur code"
-    const addText = document.createTextNode("chai aur code")
-    // adding the node to the div as a child node
-    div.appendChild(addText)
-    // attaching the div to the document
-
-    document.body.appendChild(div)
-</script>
 </html>
