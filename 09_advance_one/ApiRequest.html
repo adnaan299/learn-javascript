@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h1>hello</h1>
+    <div class="version"></div>
+    <div class="seed"></div>
+
+</body>
+<script>
+
+   const xhr = new XMLHttpRequest()  
+   const requestUrl = 'https://randomuser.me/api/'
+   xhr.open('GET', requestUrl)
+   xhr.onreadystatechange = function (){
+    console.log(xhr.readyState)
+    if(xhr.readyState === 4){
+        const data = JSON.parse(this.responseText)
+        console.log(data)
+        console.log(data.info.version)
+        const version = data.info.version
+        document.querySelector('.version').innerHTML = version
+        const seed = data.info.seed
+        document.querySelector('.seed').innerHTML = seed
+    }
+
+   }
+   xhr.send()
+</script>
+</html>
