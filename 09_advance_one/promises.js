@@ -103,7 +103,7 @@ consumePromiseFive()
 // }
 
 // getUsers()
-
+console.log('FIRSt')
 fetch('https://jsonplaceholder.typicode.com/users')
 .then((response) => {
     return response.json()
